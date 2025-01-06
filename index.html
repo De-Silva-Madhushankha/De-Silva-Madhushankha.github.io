@@ -1,34 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main CSS -->
     <title>Madhushankha De Silva</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Conatact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>Software Developer</p>
-                <h1>Hi, I'm <span>Madhushankha</span><br>De Silva From Sri Lanka</h1>
+    <!-- ---------------------Header---------------------------->
+
+    <header class="header">
+        <a href="#" class="logo">Madhushankha De Silva</a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <!------------------------Home Design-------------------------->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, Myself </h3>
+            <h1>Madhushankha De Silva</h1>
+            <h3>And I'm a <span class="multiple-text"></span> </h3>
+            <p>I am a skilled backend developer specializing in building scalable, efficient server-side solutions.
+                Proficient in Python, JavaScript, Java and frameworks like Django, Node.js and Spring Boot, I excel in
+                designing secure APIs, optimizing databases, and creating reliable architectures. With a problem-solving
+                mindset and a passion for clean, efficient code, I deliver backend systems that drive seamless and
+                impactful user experiences.</p>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-medium"></i></a>
+            </div>
+            <a href="#" class="btn"> Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="images/profile_pic.png" alt="photo">
+        </div>
+    </section>
+
+    <!-- ---------------------About---------------------------- -->
+
+    <section class="about" id="about">
+
+        <div class="about-img">
+            <img src="images/user.png" alt="about pic">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Backend Developer</h3>
+            <p>I am a skilled backend developer specializing in building scalable, efficient server-side solutions.
+                Proficient in Python, JavaScript, Java and frameworks like Django, Node.js and Spring Boot, I excel in
+                designing secure APIs, optimizing databases, and creating reliable architectures. With a problem-solving
+                mindset and a passion for clean, efficient code, I deliver backend systems that drive seamless and
+                impactful user experiences.</p>
+            <a href="#" class="btn"> Read more</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ---------------------Services---------------------------- -->
+
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Designing</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fuga voluptas facilis harum numquam
+                    praesentium et, est quas necessitatibus voluptate suscipit, quia dolor blanditiis sed excepturi,
+                    incidunt distinctio illum deleniti.</p>
+                <a href="#" class="btn">Learn more</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-solid fa-laptop"></i>
+                <h3>Software Developement</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fuga voluptas facilis harum numquam
+                    praesentium et, est quas necessitatibus voluptate suscipit, quia dolor blanditiis sed excepturi,
+                    incidunt distinctio illum deleniti.</p>
+                <a href="#" class="btn">Learn more</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-solid fa-hexagon-nodes"></i>
+                <h3>Data Engineering</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fuga voluptas facilis harum numquam
+                    praesentium et, est quas necessitatibus voluptate suscipit, quia dolor blanditiis sed excepturi,
+                    incidunt distinctio illum deleniti.</p>
+                <a href="#" class="btn">Learn more</a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!------------------------About-------------------------->
-    <div id="about">
+
+    <!-- ---------------------Portfolio---------------------------- -->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/work-1.png" alt="portfolio1">
+                <div class="portfolio-layer">
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/work-3.png" alt="portfolio1">
+                <div class="portfolio-layer">
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/work-2.png" alt="portfolio1">
+                <div class="portfolio-layer">
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/bairwayshome.jpeg" alt="portfolio1">
+                <div class="portfolio-layer">
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- contact -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Phone">
+                <input type="text" placeholder="Subject">
+            </div>
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copywright &copy; 2025 by @MadhushankhaDeSilva | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Reveal JS-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -36,7 +238,11 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>A Passionate undergraduate at University of Moratuwa and a STEM enthusiast with a background in computer science and engineering. I am a dedicated learner with a commitment to continuous improvement, always seeking opportunities to expand my knowledge and skill set. I use my skills and knowledge to make a positive impact on both physical and digital world. Let’s connect and see how we can work together to make a difference!</p>
+                    <p>A Passionate undergraduate at University of Moratuwa and a STEM enthusiast with a background in
+                        computer science and engineering. I am a dedicated learner with a commitment to continuous
+                        improvement, always seeking opportunities to expand my knowledge and skill set. I use my skills
+                        and knowledge to make a positive impact on both physical and digital world. Let’s connect and
+                        see how we can work together to make a difference!</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">SKills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -57,7 +263,8 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2024 - Current</span><br> Undergraduate at <a href="https://cse.mrt.ac.lk/"> CSE @UoM</a></li>
+                            <li><span>2024 - Current</span><br> Undergraduate at <a href="https://cse.mrt.ac.lk/"> CSE
+                                    @UoM</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,46 +272,20 @@
         </div>
     </div>
 
-    <!-- ---------------------Services---------------------------- -->
-
-    <div id="services">
-        <div class="container"><br>
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <h2>Web Designing</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fuga voluptas facilis harum numquam praesentium et, est quas necessitatibus voluptate suscipit, quia dolor blanditiis sed excepturi, incidunt distinctio illum deleniti.</p>
-                    <a href="#">learn more</a>
-                </div>
-
-                <div>
-                    <h2>Software Developement</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fuga voluptas facilis harum numquam praesentium et, est quas necessitatibus voluptate suscipit, quia dolor blanditiis sed excepturi, incidunt distinctio illum deleniti.</p>
-                    <a href="#">learn more</a>
-                </div>
-
-                <div>
-                    <h2>Mobile App Developement</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fuga voluptas facilis harum numquam praesentium et, est quas necessitatibus voluptate suscipit, quia dolor blanditiis sed excepturi, incidunt distinctio illum deleniti.</p>
-                    <a href="#">learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <script>
 
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-        
-        function opentab(tabname){
 
-            for(tablink of tablinks){
+        function opentab(tabname) {
+
+            for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
 
-            for(tabcontent of tabcontents){
+            for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
 
@@ -115,13 +296,4 @@
         }
 
 
-    </script>
-    
-
-
-
-
-    
-    
-</body>
-</html>
+    </script> -->
