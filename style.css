@@ -231,12 +231,34 @@ span {
     margin: 1rem 0 3rem;
 }
 
+.services-container i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+
+}
+
+.services-container i:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
 .portfolio {
     background: var(--snd-bg-color);
 }
 
 .portfolio h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
 
 }
 
