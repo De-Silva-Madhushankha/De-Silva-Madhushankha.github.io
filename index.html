@@ -213,27 +213,19 @@
 
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
-
-      <form action="#">
+      <form id="contactForm">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email" />
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email" required />
         </div>
-
         <div class="input-box">
-          <input type="text" placeholder="Phone" />
-          <input type="text" placeholder="Subject" />
+          <input type="text" name="phone" placeholder="Phone" />
+          <input type="text" name="subject" placeholder="Subject" />
         </div>
-
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Message"
-        ></textarea>
+        <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
         <input type="submit" value="Send Message" class="btn" />
       </form>
+      <div id="toast" style="display:none;position:fixed;bottom:30px;right:30px;z-index:9999;padding:16px 32px;border-radius:8px;font-size:1.6rem;color:#fff;background:#59B2F4;box-shadow:0 2px 8px rgba(89,178,244,0.15);transition:opacity 0.3s;"></div>
     </section>
 
     <!-- Footer -->
@@ -258,6 +250,44 @@
 
     <!-- Custom Script -->
     <script src="script.js"></script>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        const toast = document.getElementById('toast');
+        try {
+          const res = await fetch('https://formspree.io/f/mkgzoejv', {
+            method: 'POST',
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          if (res.ok) {
+            toast.textContent = 'Message sent successfully!';
+            toast.style.background = '#59B2F4';
+            toast.style.display = 'block';
+            toast.style.opacity = '1';
+            form.reset();
+          } else {
+            toast.textContent = 'Error sending message. Please try again.';
+            toast.style.background = '#e74c3c';
+            toast.style.display = 'block';
+            toast.style.opacity = '1';
+          }
+        } catch {
+          toast.textContent = 'Network error. Please try again.';
+          toast.style.background = '#e74c3c';
+          toast.style.display = 'block';
+          toast.style.opacity = '1';
+        }
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => { toast.style.display = 'none'; }, 300);
+        }, 3500);
+      });
+    </script>
   </body>
 </html>
 
